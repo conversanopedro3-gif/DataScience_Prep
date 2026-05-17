@@ -1,30 +1,31 @@
-# Chemical Inventory Data Pipeline & BI Automation
+# Corporate Data Pipelines, Web Scraping & BI Automation
 
-Welcome to my technical portfolio. This repository contains practical implementations of web scraping, automated data pipelines, data cleaning, and business intelligence reporting using Python for supply chain, e-commerce, and laboratory metrics.
+Welcome to my technical portfolio. This repository showcases production-ready implementations of autonomous web scraping, complete ETL pipelines, statistical data sanitization, and automated Business Intelligence (BI) reporting using Python.
 
 ## 🚀 Professional Profile
 **Aspiring Data Scientist & Automation Developer**
-Specialized in building automated data pipelines, data ingestion architectures, web scraping bots, and database normalization using Python. Practical experience optimizing data consistency through missing value handling (statistical imputation), redundancy removal, and generating structured corporate reports (*DataFrames*, Excel, CSV) alongside dynamic visualizations with *Matplotlib*.
+Specialized in engineering end-to-end data architectures, automated ingestion pipelines, and structural web scrapers using Python. Experienced in optimizing dataset integrity through redundancy removal, missing value handling via statistical imputation, and generating multi-format executive summaries (DataFrames, Excel, CSV) coupled with insightful business visualizations using *Matplotlib*.
 
-* **Core Technical Stack:** Python, Pandas, NumPy, BeautifulSoup4, Requests, Matplotlib, SQLite, Git/GitHub, VS Code.
-
----
-
-## 📊 Project 1: Laboratory SKU Pipeline (`practica_pandas.py`)
-In this project, I developed a script that simulates a corporate data ingestion and cleaning process for manufacturing and chemical product metrics (SKUs):
-
-1. **Data Normalization:** Cleaned typographical errors and structural inconsistencies in product codes using `.replace()`.
-2. **Deduplication:** Dropped redundant rows to ensure accurate business reporting via `.drop_duplicates()`.
-3. **Statistical Imputation:** Handled missing chemical concentration values (`NaN`) by calculating and injecting the dataset's mathematical mean via `.fillna()`.
-4. **Strategic Aggregation:** Implemented `.groupby()` and `.agg()` to generate a high-level executive summary (average price, mean concentration, and stock volume per category).
-5. **Automated Reporting:** Programmed the system to automatically export production-ready reports in Excel (`.xlsx`), CSV, and a visual bar chart (`.png`) for stakeholders.
+* **Core Technical Stack:** Python, Pandas, NumPy, BeautifulSoup4, Requests, Matplotlib, Git/GitHub, VS Code.
 
 ---
 
-## 🕷️ Project 2: Automated E-Commerce Web Scraper (`scraper_libros.py`)
-In this project, I engineered an autonomous web scraping pipeline designed to harvest live inventory and pricing metrics from a simulated commercial marketplace:
+## 🏗️ Project Portfolio Breakdown
 
-1. **HTTP Ingestion:** Programmed network requests using `requests` with customized *User-Agent* headers to mimic human browser behavior and bypass server-side connection blocks.
-2. **HTML Parsing & Extraction:** Utilized `BeautifulSoup4` to traverse the DOM tree, targeting specific HTML tags (`<article>`, `<h3>`, `<p>`) to extract raw titles and pricing elements.
-3. **Encoding & Text Sanitization:** Implemented in-line string cleaning logic (`.replace()`, `.strip()`) to eliminate corrupt encoding artifacts (such as ghost characters like `Â`) and currency symbols, safely converting text streams into clean numeric data types (`float`).
-4. **Structured Storage:** Formatted the unstructured web data into a tabular *Pandas DataFrame* and automated its compilation into a clean, production-ready `Inventario_Libros_Extraido.csv` report.
+### 📊 1. Laboratory SKU Data Ingestion Pipeline (`practica_pandas.py`)
+A simulated corporate data cleaning script engineered to normalize structural and typographical anomalies in manufacturing records:
+* **Data Normalization & Deduplication:** Cleansed categorical inconsistencies via `.replace()` and pruned redundant rows using `.drop_duplicates()`.
+* **Statistical Imputation:** Mitigated missing chemical concentration metrics (`NaN`) by calculating and injecting the mathematical mean of the feature vector via `.fillna()`.
+* **Executive Aggregation:** Applied `.groupby()` and `.agg()` matrices to output high-level insights (average pricing, concentration bounds, and inventory volume per SKU class).
+
+### 🕷️ 2. Autonomous Market Intelligence Scraper (`scraper_libros.py`)
+An independent web crawling bot built to dynamically harvest commercial intelligence and pricing catalog data from live web servers:
+* **HTTP Ingestion:** Engineered robust network requests utilizing custom *User-Agent* mapping to simulate human behavior and prevent connection blocks.
+* **DOM Traversal:** Used `BeautifulSoup4` to target structural HTML coordinates (`<article>`, `<h3>`, `<p>`) for mass data extraction.
+* **Text Sanitization & Type Casting:** Cleaned formatting artifacts and corrupt string tokens (e.g., `Â`, `£`) using text-replacement vectors, safely casting the raw streams into operational `float` datatypes.
+
+### ⚙️ 3. Unified End-to-End ETL Data Pipeline (`pipeline_completo.py`)
+An advanced orquestrator script that unifies the collection and analysis scripts into a production-ready **Extract, Transform, Load (ETL)** system:
+* **Orchestration:** Automates the execution of the web scraper to fetch live market entries from the network layer.
+* **BI Transformation:** Ingests the output dataset, executes predictive segmentations (Económico, Estándar, Premium) using custom binning constraints (`pd.cut()`), and runs a descriptive analytical query across prices.
+* **Automated Visual Reporting:** Generates an executive summary directly to the terminal alongside an automated distribution chart (`Grafico_Mercado_Libros.png`) built with *Matplotlib*.
