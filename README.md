@@ -1,41 +1,33 @@
-# 🧪 Notino Fragrance Market Scraper & Data Analytics
+# 📊 Notino Fragrance Market Analytics & Automation
 
-Este proyecto es una suite completa de **Data Science** y **Web Scraping** diseñada para automatizar la recopilación, limpieza y análisis estadístico del mercado de fragancias masculinas en el e-commerce de Notino.
-
-El proyecto está desarrollado completamente en **Python** y estructurado bajo los estándares profesionales de pipelines de datos.
-
----
-
-## 🛠️ Estructura del Proyecto
-
-El repositorio está dividido en 3 motores lógicos independientes y un dataset final optimizado:
-
-1. **`scraper_profumi.py` (Extracción de Datos):** Automatiza la navegación web utilizando `undetected-chromedriver` para evadir sistemas anti-bot de forma invisible. Utiliza un ciclo iterativo (`for`) para paginar el catálogo de forma dinámica y captura el código fuente con `BeautifulSoup`.
-2. **`pulisci_report.py` (Data Cleaning):** Procesa el texto plano extraído del DOM de la página. Utiliza expresiones regulares (`re`) y `Pandas` para eliminar ruido de fondo, separar las marcas comerciales de los nombres de los productos e aislar los precios reales en formato numérico.
-3. **`analizza_dati.py` (Business Intelligence):** Carga la base de datos optimizada y ejecuta cálculos estadísticos en milisegundos utilizando `Pandas` para extraer KPIs de negocio.
-4. **`Report_Notino_PERFETTO.csv` (Dataset Optimizado):** El resultado final. Una base de datos estructurada y limpia con información de marcas, nombres de fragancias, precios reales y unidades de venta simuladas.
+> 🌍 **Choose your language / Scegli la tua lingua:**
+> * [English Version (#-english-version)](#-english-version)
+> * [Versione Italiana (#-versione-italiana)](#-versione-italiana)
 
 ---
 
-## 📈 KPIs extraídos del Mercado
+## 🇬🇧 English Version
 
-Tras ejecutar el pipeline completo sobre el catálogo analizado, el procesador estadístico arroja los siguientes indicadores clave de rendimiento:
+A professional Data Science pipeline designed to automate the extraction, deep cleaning, and statistical processing of fragrance market data from Notino.
 
-* 💵 **Precio Medio del Mercado:** ~43.08 €
-* 💎 **Fragranza Top de Gama (Más cara):** Yves Saint Laurent - Y Le Parfum (97.30 €)
-* 🏷️ **Fragranza Entry Level (Más barata):** Calvin Klein - CK Be (17.70 €)
+### 🚀 Core Features
+* **Automated Web Scraping:** Extracts multi-page catalog data dynamically.
+* **Executive Excel Reporting:** Automatically generates styled spreadsheets with optimized column widths and zebra striping.
 
-### 👑 Top Marcas con Mayor Volumen de Ventas (Simuladas)
-El análisis con Pandas determinó que el volumen del mercado está liderado por las siguientes marcas:
-1. **Calvin Klein** (Mayor volumen de unidades)
-2. **Yves Saint Laurent**
-3. **Lattafa** (Fragancias árabes en tendencia de crecimiento)
+### 📂 Project Structure
+* `scraper_profumi.py`: Automated data extraction bot.
+* `pulisci_report.py`: Advanced data cleaning & Excel styling engine.
 
 ---
 
-## ⚙️ Requisitos e Instalación
+## 🇮🇹 Versione Italiana
 
-Para ejecutar este pipeline localmente, clona este repositorio e instala las dependencias de compatibilidad para entornos avanzados (Python 3.14+):
+Una pipeline professionale di Data Science progettata per automatizzare l'estrazione, la pulizia profonda e l'elaborazione statistica dei dati di mercato dei profumi da Notino.
 
-```bash
-python -m pip install undetected-chromedriver beautifulsoup4 pandas setuptools
+### 🚀 Funzionalità Principali
+* **Web Scraping Automatizzato:** Estrae dinamicamente i dati del catalogo multi-pagina.
+* **Reportistica Excel Executive:** Genera automaticamente fogli di calcolo stilizzati con larghezze delle colonne ottimizzate e formattazione a righe alternate.
+
+### 📂 Struttura del Progetto
+* `scraper_profumi.py`: Bot di estrazione automatica dei dati.
+* `pulisci_report.py`: Motore avanzato di pulizia dati e stile Excel.
