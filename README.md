@@ -1,31 +1,41 @@
-# Corporate Data Pipelines, Web Scraping & BI Automation
+# 🧪 Notino Fragrance Market Scraper & Data Analytics
 
-Welcome to my technical portfolio. This repository showcases production-ready implementations of autonomous web scraping, complete ETL pipelines, statistical data sanitization, and automated Business Intelligence (BI) reporting using Python.
+Este proyecto es una suite completa de **Data Science** y **Web Scraping** diseñada para automatizar la recopilación, limpieza y análisis estadístico del mercado de fragancias masculinas en el e-commerce de Notino.
 
-## 🚀 Professional Profile
-**Aspiring Data Scientist & Automation Developer**
-Specialized in engineering end-to-end data architectures, automated ingestion pipelines, and structural web scrapers using Python. Experienced in optimizing dataset integrity through redundancy removal, missing value handling via statistical imputation, and generating multi-format executive summaries (DataFrames, Excel, CSV) coupled with insightful business visualizations using *Matplotlib*.
-
-* **Core Technical Stack:** Python, Pandas, NumPy, BeautifulSoup4, Requests, Matplotlib, Git/GitHub, VS Code.
+El proyecto está desarrollado completamente en **Python** y estructurado bajo los estándares profesionales de pipelines de datos.
 
 ---
 
-## 🏗️ Project Portfolio Breakdown
+## 🛠️ Estructura del Proyecto
 
-### 📊 1. Laboratory SKU Data Ingestion Pipeline (`practica_pandas.py`)
-A simulated corporate data cleaning script engineered to normalize structural and typographical anomalies in manufacturing records:
-* **Data Normalization & Deduplication:** Cleansed categorical inconsistencies via `.replace()` and pruned redundant rows using `.drop_duplicates()`.
-* **Statistical Imputation:** Mitigated missing chemical concentration metrics (`NaN`) by calculating and injecting the mathematical mean of the feature vector via `.fillna()`.
-* **Executive Aggregation:** Applied `.groupby()` and `.agg()` matrices to output high-level insights (average pricing, concentration bounds, and inventory volume per SKU class).
+El repositorio está dividido en 3 motores lógicos independientes y un dataset final optimizado:
 
-### 🕷️ 2. Autonomous Market Intelligence Scraper (`scraper_libros.py`)
-An independent web crawling bot built to dynamically harvest commercial intelligence and pricing catalog data from live web servers:
-* **HTTP Ingestion:** Engineered robust network requests utilizing custom *User-Agent* mapping to simulate human behavior and prevent connection blocks.
-* **DOM Traversal:** Used `BeautifulSoup4` to target structural HTML coordinates (`<article>`, `<h3>`, `<p>`) for mass data extraction.
-* **Text Sanitization & Type Casting:** Cleaned formatting artifacts and corrupt string tokens (e.g., `Â`, `£`) using text-replacement vectors, safely casting the raw streams into operational `float` datatypes.
+1. **`scraper_profumi.py` (Extracción de Datos):** Automatiza la navegación web utilizando `undetected-chromedriver` para evadir sistemas anti-bot de forma invisible. Utiliza un ciclo iterativo (`for`) para paginar el catálogo de forma dinámica y captura el código fuente con `BeautifulSoup`.
+2. **`pulisci_report.py` (Data Cleaning):** Procesa el texto plano extraído del DOM de la página. Utiliza expresiones regulares (`re`) y `Pandas` para eliminar ruido de fondo, separar las marcas comerciales de los nombres de los productos e aislar los precios reales en formato numérico.
+3. **`analizza_dati.py` (Business Intelligence):** Carga la base de datos optimizada y ejecuta cálculos estadísticos en milisegundos utilizando `Pandas` para extraer KPIs de negocio.
+4. **`Report_Notino_PERFETTO.csv` (Dataset Optimizado):** El resultado final. Una base de datos estructurada y limpia con información de marcas, nombres de fragancias, precios reales y unidades de venta simuladas.
 
-### ⚙️ 3. Unified End-to-End ETL Data Pipeline (`pipeline_completo.py`)
-An advanced orquestrator script that unifies the collection and analysis scripts into a production-ready **Extract, Transform, Load (ETL)** system:
-* **Orchestration:** Automates the execution of the web scraper to fetch live market entries from the network layer.
-* **BI Transformation:** Ingests the output dataset, executes predictive segmentations (Económico, Estándar, Premium) using custom binning constraints (`pd.cut()`), and runs a descriptive analytical query across prices.
-* **Automated Visual Reporting:** Generates an executive summary directly to the terminal alongside an automated distribution chart (`Grafico_Mercado_Libros.png`) built with *Matplotlib*.
+---
+
+## 📈 KPIs extraídos del Mercado
+
+Tras ejecutar el pipeline completo sobre el catálogo analizado, el procesador estadístico arroja los siguientes indicadores clave de rendimiento:
+
+* 💵 **Precio Medio del Mercado:** ~43.08 €
+* 💎 **Fragranza Top de Gama (Más cara):** Yves Saint Laurent - Y Le Parfum (97.30 €)
+* 🏷️ **Fragranza Entry Level (Más barata):** Calvin Klein - CK Be (17.70 €)
+
+### 👑 Top Marcas con Mayor Volumen de Ventas (Simuladas)
+El análisis con Pandas determinó que el volumen del mercado está liderado por las siguientes marcas:
+1. **Calvin Klein** (Mayor volumen de unidades)
+2. **Yves Saint Laurent**
+3. **Lattafa** (Fragancias árabes en tendencia de crecimiento)
+
+---
+
+## ⚙️ Requisitos e Instalación
+
+Para ejecutar este pipeline localmente, clona este repositorio e instala las dependencias de compatibilidad para entornos avanzados (Python 3.14+):
+
+```bash
+python -m pip install undetected-chromedriver beautifulsoup4 pandas setuptools
